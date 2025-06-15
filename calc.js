@@ -71,7 +71,7 @@ async function muatHistory() {
       return;
     }
   
-    data.forEach((item) => {
+     data.forEach((item) => {
   const div = document.createElement("div");
   div.className = "d-flex justify-content-between align-items-center py-2 border-bottom border-secondary";
 
@@ -79,7 +79,6 @@ async function muatHistory() {
     <span class="text-light">${item.history}</span>
     <button class="btn btn-sm btn-outline-danger" onclick="hapusHistory(${item.id})">Hapus</button>
   `;
-
   list.appendChild(div);
 });
 
