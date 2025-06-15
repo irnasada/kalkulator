@@ -76,7 +76,7 @@ async function muatHistory() {
       div.className = "flex justify-between items-center p-2 border-b border-gray-300";
       div.innerHTML = `
         <span class="text-gray-800">${item.history}</span>
-        <button class="bg-red-500 text-white rounded-lg px-2 py-1 hover:bg-red-600" onclick="hapusHistory(${item.id})">Hapus</button>
+        <button class="text-red-600" onclick="hapusHistory(${item.id})">Hapus</button>
       `;
       list.appendChild(div);
     });
