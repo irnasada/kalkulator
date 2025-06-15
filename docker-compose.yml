@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  kalkulator-irna:
+    build: .
+    container_name: kalkulator-irna
+    ports:
+      - "8080:80"
+    restart: always
