@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Modern</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white flex items-center justify-center min-h-screen">
+
+  <div class="calculator bg-gray-900 p-6 rounded-2xl shadow-2xl w-80">
+    <input id="res" readonly
+      class="w-full h-16 text-2xl text-right bg-gray-950 text-green-400 border-2 border-gray-600 rounded-lg px-3 mb-4 outline-none" />
+
+    <div class="grid grid-cols-4 gap-3">
+      <button class="bg-red-500 hover:scale-105 transform rounded-xl h-14 clear" onclick="Clear()">C</button>
+      <button class="bg-red-500 hover:scale-105 transform rounded-xl h-14" onclick="Back()">⌫</button>
+      <button class="bg-purple-500 hover:scale-105 transform rounded-xl h-14" onclick="Solve('%')">%</button>
+      <button class="bg-yellow-400 hover:scale-105 transform rounded-xl h-14" onclick="Solve('/')">/</button>
+      
+      <button class="bg-blue-500 hover:scale-105 transform rounded-xl h-14" onclick="Solve('7')">7</button>
+      <button class="bg-purple-500 hover:scale-105 transform rounded-xl h-14" onclick="Solve('8')">8</button>
+      <button class="bg-blue-500 hover:scale-105 transform rounded-xl h-14" onclick="Solve('9')">9</button>
+      <button class="bg-yellow-400 hover:scale-105 transform rounded-xl h-14" onclick="Solve('*')">*</button>
+
+      <button class="bg-blue-500 hover:scale-105 transform rounded-xl h-14" onclick="Solve('4')">4</button>
+      <button class="bg-purple-500 hover:scale-105 transform rounded-xl h-14" onclick="Solve('5')">5</button>
+      <button class="bg-blue-500 hover:scale-105 transform rounded-xl h-14" onclick="Solve('6')">6</button>
+      <button class="bg-yellow-400 hover:scale-105 transform rounded-xl h-14" onclick="Solve('-')">-</button>
+
+      <button class="bg-blue-500 hover:scale-105 transform rounded-xl h-14" onclick="Solve('1')">1</button>
+      <button class="bg-purple-500 hover:scale-105 transform rounded-xl h-14" onclick="Solve('2')">2</button>
+      <button class="bg-blue-500 hover:scale-105 transform rounded-xl h-14" onclick="Solve('3')">3</button>
+      <button class="bg-yellow-400 hover:scale-105 transform rounded-xl h-14" onclick="Solve('+')">+</button>
+
+      <button class="bg-blue-500 hover:scale-105 transform rounded-xl h-14 col-span-2" onclick="Solve('0')">0</button>
+      <button class="bg-purple-500 hover:scale-105 transform rounded-xl h-14" onclick="Solve('.')">.</button>
+      <button class="bg-green-500 hover:scale-105 transform rounded-xl h-14 equal col-span-1" onclick="Result()">=</button>
+    </div>
+  </div>
+
+  <script type="module" src="calc.js"></script>
+</body>
+</html>
