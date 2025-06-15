@@ -72,14 +72,17 @@ async function muatHistory() {
     }
   
     data.forEach((item) => {
-      const div = document.createElement("div");
-      div.className = "flex justify-between items-center p-2 border-b border-gray-300";
-      div.innerHTML = `
-        <span class="text-gray-800">${item.history}</span>
-        <button class="text-red-600" onclick="hapusHistory(${item.id})">Hapus</button>
-      `;
-      list.appendChild(div);
-    });
+  const div = document.createElement("div");
+  div.className = "d-flex justify-content-between align-items-center py-2 border-bottom border-secondary";
+
+  div.innerHTML = `
+    <span class="text-light">${item.history}</span>
+    <button class="btn btn-sm btn-outline-danger" onclick="hapusHistory(${item.id})">Hapus</button>
+  `;
+
+  list.appendChild(div);
+});
+
   }
 
 window.Solve = Solve;
